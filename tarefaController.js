@@ -1,4 +1,4 @@
-const Tarefa = require("../models/Tarefa");
+const Tarefa = require("./Tarefa");
 
 async function listarTarefas(req, res) {
   try { res.json(await Tarefa.find().sort({ createdAt: -1 })); }
